@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Idc Calculator</title>
+    <title>22FDX Calculator</title>
     <!-- Include the Materialize CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Font -->
@@ -13,13 +13,13 @@
     </style>
   </head>
   <body class="darken-4">
-    <h3 class="center-align">22FDX Calculator</h1>
+    <h5 class="center-align">22FDX Calculator</h1>
     <form id="calculator-form" class="container">
       <div class="row">
         <div class="input-field col s6">
           <!-- Use the Materialize "input" class for the metal width input -->
           <input type="number" id="metal-width" class="validate">
-          <label for="metal-width">Metal Width</label>
+          <placeholder for="metal-width" style="font-size: 12px;">Line Width (μm)</placeholder>
         </div>
       </div>
       <div class="row">
@@ -29,12 +29,12 @@
             <option value="M1">M1</option>
             <option value="C1">C1</option>
           </select>
-          <label for="metal-name">Metal Name</label>
+          <placeholder for="metal-name" style="font-size: 12px;">Metal</placeholder >
         </div>
       </div>
       <div class="row">
         <!-- Use the Materialize "btn" class for the button -->
-        <button type="button" class="btn" onclick="calculateIdc()">Calculate Idc</button>
+        <button type="button" class="btn" onclick="calculateIdc()">Calculate</button>
       </div>
     </form> 
     <br>

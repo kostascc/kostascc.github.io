@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>22FDX Calculator</title>
+    <!-- Updated: 15:15 -->
      <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
@@ -11,19 +12,17 @@
     <form id="calculator-form" class="container">
       <div class="row">
         <div class="input-field col s6">
-          <!-- Use the Materialize "input" class for the metal width input -->
           <input type="number" id="metal-width" class="validate">
           <placeholder for="metal-width" style="font-size: 12px;">Line Width (μm)</placeholder>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <!-- Use the Materialize "select" class for the metal name dropdown -->
-          <select id="metal-name" class="browser-default">
+          <select id="metal-name">
             <option value="M1">M1</option>
             <option value="C1">C1</option>
           </select>
-          <placeholder for="metal-name" style="font-size: 12px;">Metal</placeholder >
+          <label>Metal</label>
         </div>
       </div>
       <div class="row">

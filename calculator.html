@@ -4,34 +4,36 @@
     <!-- Updated: 15:15 -->
      <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
   <body class="darken-4">
     <h5 class="center-align">22FDX Calculator</h1>
-    <form id="calculator-form" class="container">
-      <div class="row">
-        <div class="input-field col s6">
-          <input type="number" id="metal-width" class="validate">
-          <label for="metal-width">Line Width (μm)</label>
+    <div class="col s6">
+      <form id="calculator-form" class="container">
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="number" id="metal-width" class="validate">
+            <label for="metal-width">Line Width (μm)</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <select id="metal-name">
-            <option value="M1">M1</option>
-            <option value="C1">C1</option>
-          </select>
-          <label>Metal</label>
+        <div class="row">
+          <div class="input-field col s6">
+            <select id="metal-name">
+              <option value="M1">M1</option>
+              <option value="C1">C1</option>
+            </select>
+            <label>Metal</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <!-- Use the Materialize "btn" class for the button -->
-        <button type="button" class="btn" onclick="calculateIdc()">Calculate</button>
-      </div>
-    </form> 
+        <div class="row">
+          <!-- Use the Materialize "btn" class for the button -->
+          <button type="button" class="btn" onclick="calculateIdc()">Calculate</button>
+        </div>
+      </form> 
+    </div>
+    <div class="col s6">
     <br>
     <p class="center-align">Idc: <span id="result"></span></p>
+    </div>
     
     <script>
       function calculateIdc() {
@@ -51,5 +53,9 @@
         document.getElementById('result').innerHTML = idc;
       }
     </script>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
   </body>
 </html>

@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Idc Calculator</title>
+    <style>
+      /* Add a dark background color to the body */
+      body {
+        background-color: #333;
+      }
+      
+      /* Add a light text color to the page elements */
+      h1, label, select, button {
+        color: #fff;
+      }
+      
+      /* Add a dark border and background color to the form elements */
+      input, select {
+        background-color: #444;
+        border: 1px solid #555;
+      }
+      
+      /* Add a dark hover effect to the button */
+      button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Idc Calculator</h1>
+    <form id="calculator-form">
+      <label for="metal-width">Metal Width:</label><br>
+      <input type="number" id="metal-width"><br>
+      <br>
+      <label for="metal-name">Metal Name:</label><br>
+      <select id="metal-name">
+        <option value="M1">M1</option>
+        <option value="C1">C1</option>
+      </select>
+      <br><br>
+      <button type="button" onclick="calculateIdc()">Calculate Idc</button>
+    </form> 
+    <br>
+    <p>Idc: <span id="result"></span></p>
+    
+    <script>
+      function calculateIdc() {
+        // Get the metal width and metal name from the form
+        var metalWidth = document.getElementById('metal-width').value;
+        var metalName = document.getElementById('metal-name').value;
+        
+        // Calculate the Idc value based on the metal width and metal name
+        var idc;
+        if (metalName === 'M1') {
+          idc = metalWidth * 2;
+        } else if (metalName === 'C1') {
+          idc = metalWidth * 3;
+        }
+        
+        // Display the Idc value on the page
+        document.getElementById('result').innerHTML = idc;
+      }
+    </script>
+  </body>
+</html>

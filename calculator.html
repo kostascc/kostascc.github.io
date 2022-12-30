@@ -1,45 +1,36 @@
 <html>
   <head>
     <title>Idc Calculator</title>
-    <style>
-      /* Add a dark background color to the body */
-      body {
-        background-color: #333;
-      }
-      
-      /* Add a light text color to the page elements */
-      h1, label, select, button {
-        color: #fff;
-      }
-      
-      /* Add a dark border and background color to the form elements */
-      input, select {
-        background-color: #444;
-        border: 1px solid #555;
-      }
-      
-      /* Add a dark hover effect to the button */
-      button:hover {
-        background-color: #555;
-      }
-    </style>
+    <!-- Include the Materialize CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   </head>
-  <body>
-    <h1>Idc Calculator</h1>
-    <form id="calculator-form">
-      <label for="metal-width">Metal Width:</label><br>
-      <input type="number" id="metal-width"><br>
-      <br>
-      <label for="metal-name">Metal Name:</label><br>
-      <select id="metal-name">
-        <option value="M1">M1</option>
-        <option value="C1">C1</option>
-      </select>
-      <br><br>
-      <button type="button" onclick="calculateIdc()">Calculate Idc</button>
+  <body class="darken-4">
+    <h1 class="center-align">Idc Calculator</h1>
+    <form id="calculator-form" class="container">
+      <div class="row">
+        <div class="input-field col s6">
+          <!-- Use the Materialize "input" class for the metal width input -->
+          <input type="number" id="metal-width" class="validate">
+          <label for="metal-width">Metal Width</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <!-- Use the Materialize "select" class for the metal name dropdown -->
+          <select id="metal-name" class="browser-default">
+            <option value="M1">M1</option>
+            <option value="C1">C1</option>
+          </select>
+          <label for="metal-name">Metal Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Use the Materialize "btn" class for the button -->
+        <button type="button" class="btn" onclick="calculateIdc()">Calculate Idc</button>
+      </div>
     </form> 
     <br>
-    <p>Idc: <span id="result"></span></p>
+    <p class="center-align">Idc: <span id="result"></span></p>
     
     <script>
       function calculateIdc() {
